@@ -9,7 +9,7 @@ import com.desafiomv.apirest.models.ListCafeManha;
 
 public interface ListCafeManhaRepository extends JpaRepository<ListCafeManha, Long>{
 
-
+	ListCafeManha findById(long id);
 	
 
 }
