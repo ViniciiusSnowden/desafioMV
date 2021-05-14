@@ -20,42 +20,43 @@ import io.swagger.annotations.ApiOperation;
 
 import com.desafiomv.apirest.models.ListCafeManha;
 
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value = "/api")
 @Api(value="API REST ListaCafeManha")
-@CrossOrigin(origins="")
 public class ListCafeManhaResource {
 
 	@Autowired
 	ListCafeManhaRepository listCafeManhaRepository;
 
-	@GetMapping("/lista")
+	
 	@ApiOperation(value="Retorna Lista do café da manha")
+	@GetMapping("/lista")
 	public List<ListCafeManha> lista(){
 		return listCafeManhaRepository.findAll();
 		
 	}
 	
-	@GetMapping("/lista/{id}")
+	
 	@ApiOperation(value="Retorna Lista do café da manha pelo id")
+	@GetMapping("/lista/{id}")
 	public ListCafeManha listUnico(@PathVariable(value="id")long id){
 		return listCafeManhaRepository.findById(id);
 		
 	}
-	@PostMapping("/insert")
 	@ApiOperation(value="Inserir um novo item")
+	@PostMapping("/insert")
 	public ListCafeManha saveList(@RequestBody ListCafeManha listCafeManha) {
 		return listCafeManhaRepository.save(listCafeManha);
 	}
 	
-	@DeleteMapping("/delete")
 	@ApiOperation(value="Deletar um item")
+	@DeleteMapping("/delete")
 	public void deleteListCafeManha(@RequestBody ListCafeManha listCafeManha) {
 		listCafeManhaRepository.delete(listCafeManha);
 	}
-	
-	@PutMapping("/update")
 	@ApiOperation(value="Atualiza um item")
+	@PutMapping("/update")
 	public ListCafeManha updateList(@RequestBody ListCafeManha listCafeManha) {
 		return listCafeManhaRepository.save(listCafeManha);
 	}

@@ -8,11 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
 
-import com.sun.istack.NotNull;
 
 @Entity
-@Table(uniqueConstraints={@UniqueConstraint(columnNames = {"name" , "cpf","opCafe1","opCafe2"})})
+@Table(name=("TB_PRODUTO"), uniqueConstraints={@UniqueConstraint(columnNames = {"name", "cpf","opCafe1","opCafe2"})})
 public class ListCafeManha implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -73,17 +73,5 @@ public class ListCafeManha implements Serializable {
 	public void setOpCafe2(String opCafe2) {
 		this.opCafe2 = opCafe2;
 	}
-	
-	
-	
-
-	/*create table `cafedamanha`(
-		       `user_id` int not null auto_increment,
-		      `user_name` vachar(100) not null,
-		      `user_cpf` vachar(11) not null unique,
-		      `op_cafe1` vachar(255) not null unique,
-		      `op_cafe2` vachar(255) not null,
-		      primary key (`user_id`)
-		)*/	
 	
 }
