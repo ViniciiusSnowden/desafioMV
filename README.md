@@ -1,4 +1,4 @@
-# Desafio   <img src="https://www.mv.com.br/assets/img/layout/logo.svg" alt="MV" width="125" height="40">
+# Desafio   <img src="https://www.pinclipart.com/picdir/big/354-3545224_our-purpose-is-to-provide-medical-intelligence-systems.png" alt="MV" width="125" height="40">
 ## Project  Breakcoffee List
 ```
 Projeto foi desenvolvido para o processo seletivo da Empresa MV
